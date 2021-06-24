@@ -9,8 +9,10 @@ import pdb
 
 def resize_cam(cam, size=(224, 224)):
     cam = cv2.resize(cam , (size[0], size[1]))
-    cam = cam - cam.min()
-    cam = cam / cam.max()
+    #cam = cam - cam.min()
+    #cam = cam / cam.max()
+    cam_min, cam_max = cam.min(), cam.max()
+    cam = (cam - cam_min) / (cam_max - cam_min)
     return cam
 
 
