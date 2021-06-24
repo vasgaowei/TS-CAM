@@ -1,5 +1,5 @@
 # TS-CAM: Token Semantic Coupled Attention Map for Weakly SupervisedObject Localization
-This is the official implementaion of paper [TS-CAM: Token Semantic Coupled Attention Map for Weakly SupervisedObject Localization](https://arxiv.org/abs/2103.14862)
+This is the official implementaion of paper [TS-CAM: Token Semantic Coupled Attention Map for Weakly Supervised Object Localization](https://arxiv.org/abs/2103.14862)
 
 This repository contains Pytorch training code, evaluation code, pretrained models and jupyter notebook for more visualization.
 
@@ -138,5 +138,14 @@ TS-CAM/
     visualization_attention_map_cub.ipynb
     visualization_attention_map_imaget.ipynb
 ```
-Please download pretrained TS-CAM model weights and try more visualzation results.
-You can try other interseting images you like to see the localization map(TS-CAM).
+Please download pretrained TS-CAM model weights and try more visualzation results((Attention maps using our method and [Attention Rollout](https://arxiv.org/abs/2005.00928) method)).
+You can try other interseting images you like to show the localization map(ts-cams).
+
+# Contacts
+If you have any question about our work or this repository, please don't hesitate to contact us by emails.
+- [vasgaowei@gmail.com](vasgaowei@gmail.com)
+- [qxye@ucas.ac.cn](qxye@ucas.ac.cn)
+- [wanfang@ucas.ac.cn](wanfang@ucas.ac.cn)
+
+You can also open an issue under this project.
+
