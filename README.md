@@ -1,19 +1,13 @@
 # TS-CAM: Token Semantic Coupled Attention Map for Weakly SupervisedObject Localization
-This is the official implementaion of paper [TS-CAM: Token Semantic Coupled Attention Map for Weakly Supervised Object Localization](https://arxiv.org/abs/2103.14862)
+This is the official implementaion of paper [***TS-CAM: Token Semantic Coupled Attention Map for Weakly Supervised Object Localization***](https://arxiv.org/abs/2103.14862)
 
 This repository contains Pytorch training code, evaluation code, pretrained models and jupyter notebook for more visualization.
 
-If you use this code for a paper please cite:
+## Illustration
 
-```
-@article{Gao2021TSCAMTS,
-  title={TS-CAM: Token Semantic Coupled Attention Map for Weakly Supervised Object Localization},
-  author={Wei Gao and Fang Wan and Xingjia Pan and Zhiliang Peng and Qi Tian and Zhenjun Han and Bolei Zhou and Qixiang Ye},
-  journal={ArXiv},
-  year={2021},
-  volume={abs/2103.14862}
-}
-```
+Based on Deit, TS-CAM couples attention maps from visual image transformer with semantic-aware maps to obtain accurate localization maps (Token Semantic Coupled Attention Map, ts-cam).
+
+![ts-cam](./figures/ts-cam.png)
 
 # Model Zoo
 
@@ -141,6 +135,18 @@ TS-CAM/
 Please download pretrained TS-CAM model weights and try more visualzation results((Attention maps using our method and [Attention Rollout](https://arxiv.org/abs/2005.00928) method)).
 You can try other interseting images you like to show the localization map(ts-cams).
 
+## Visualize localization results
+We provide some visualization results as follows.
+
+![localization](./figures/localization_results.png)
+
+## Visualize attention maps
+
+We can also visualize attention maps from different transformer layers.
+
+![attention maps_cub](./figures/attention_many_layer_cub.png)
+![attention_map_ilsvrc](./figures/attention_many_layer_ilsvrc.png)
+
 # Contacts
 If you have any question about our work or this repository, please don't hesitate to contact us by emails.
 - [vasgaowei@gmail.com](vasgaowei@gmail.com)
@@ -149,3 +155,15 @@ If you have any question about our work or this repository, please don't hesitat
 
 You can also open an issue under this project.
 
+# Citation
+If you use this code for a paper please cite:
+
+```
+@article{Gao2021TSCAMTS,
+  title={TS-CAM: Token Semantic Coupled Attention Map for Weakly Supervised Object Localization},
+  author={Wei Gao and Fang Wan and Xingjia Pan and Zhiliang Peng and Qi Tian and Zhenjun Han and Bolei Zhou and Qixiang Ye},
+  journal={ArXiv},
+  year={2021},
+  volume={abs/2103.14862}
+}
+```
