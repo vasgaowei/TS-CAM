@@ -9,19 +9,32 @@ Based on Deit, TS-CAM couples attention maps from visual image transformer with 
 
 ![ts-cam](./figures/ts-cam.png)
 
+# Updates
+- (06/07/2021) Higher performance is reported when using stonger visual transformer [Conformer](https://arxiv.org/abs/2105.03889).
+
 # Model Zoo
 
 We provide pretrained TS-CAM models trained on CUB-200-2011 and ImageNet_ILSVRC2012 datasets.
 
-| Dataset | Loc.Acc@1 | Loc.Acc@5 | Loc.Gt-Known | Cls.Acc@1 | Cls.Acc@5 | Baidu Drive | Google Drive |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-|  CUB-200-2011   |   71.3   |   83.8  |  87.7  |   80.3  |   94.8  |  [model](https://pan.baidu.com/s/1WdhcRh5pBFQD8DlbT_GoAQ)  | [model](https://drive.google.com/file/d/19l4uwsjE6uVah_0-a_VcRJlvnFb9NewH/view?usp=sharing) |
-|  ILSVRC2012   |   53.4   |  64.3   |  67.6  |   74.3  |   92.1  |   [model](https://pan.baidu.com/s/11-iPVVtKvKpcfuOD8VwOZw)  | [model](https://drive.google.com/file/d/1iNH-zI2i9mGipF0rGo1lsp13avdIjWuS/view?usp=sharing) |
+## CUB-200-2011 dataset
 
-Note: the Extrate Code for Baidu Drive is as follows:
-- CUB-200-2011: [36wz](https://pan.baidu.com/s/1WdhcRh5pBFQD8DlbT_GoAQ)
-- ILSVRC2012:   [sslq](https://pan.baidu.com/s/11-iPVVtKvKpcfuOD8VwOZw)
- 
+| Backbone | Loc.Acc@1 | Loc.Acc@5 | Loc.Gt-Known | Cls.Acc@1 | Cls.Acc@5 | Baidu Drive | Google Drive |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  Deit-S   |   71.3   |   83.8  |  87.7  |   80.3  |   94.8  |  [model](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)  | [model](https://drive.google.com/drive/folders/1vLJhWaRxCOTx_SyvrkP0XDXt9QNCXOdv?usp=sharing) |
+|  Conformer-S   |   77.2   |  90.9   |  94.1  |   81.0  |   95.8  |   [model](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)  | [model](https://drive.google.com/drive/folders/1vLJhWaRxCOTx_SyvrkP0XDXt9QNCXOdv?usp=sharing) |
+
+
+## ILSVRC2012 dataset
+
+| Backbone | Loc.Acc@1 | Loc.Acc@5 | Loc.Gt-Known | Cls.Acc@1 | Cls.Acc@5 | Baidu Drive | Google Drive |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  ILSVRC2012   |   53.4   |  64.3   |  67.6  |   74.3  |   92.1  |   [model](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)  | [model](https://drive.google.com/drive/folders/1vLJhWaRxCOTx_SyvrkP0XDXt9QNCXOdv?usp=sharing) |
+
+Note: the Extrate Code for Baidu Drive is [gwg7](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)
+
+- On CUB-200-2011 dataset, we train **TS-CAM** on one Titan RTX 2080Ti GPU, with batch-size 128 and learning rate 5e-5, respectively. 
+- On ILSVRC2012 dataset, we train **TS-CAM** on four Titan RTX 2080Ti GPUs, with batch-size 256 and learning rate 5e-4, respectively.
+
 # Usage
 
 First clone the repository locally:
