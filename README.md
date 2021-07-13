@@ -136,8 +136,11 @@ bash val_ilsvrc.sh {GPU_ID} ${NET} ${NET_SCALE} ${SIZE} ${MODEL_PATH}
 `GPU_ID` should be specified and multiple GPUs can be used for accelerating training and evaluation.
 
 `NET` shoule be chosen among `deit` and `conformer`.
+
 `NET_SCALE` shoule be chosen among `tiny`, `small` and `base`.
+
 `SIZE` shoule be chosen among `224` and `384`.
+
 `MODEL_PATH` is the path of pretrained model.
 
 # Visualization
