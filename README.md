@@ -116,27 +116,28 @@ And the training and validation data is expected to be in the `train/` folder an
 
 On CUB-200-2011 dataset:
 ```
-bash train_val_cub.sh {GPU_ID} ${NET}
+bash train_val_cub.sh {GPU_ID} ${NET} ${NET_SCALE} ${SIZE}
 ```
 On ImageNet1k dataset:
 ```
-bash train_val_ilsvrc.sh {GPU_ID} ${NET}
+bash train_val_ilsvrc.sh {GPU_ID} ${NET}  ${NET_SCALE} ${SIZE}
 ```
 Please note that pretrained model weights of Deit-tiny, Deit-small and Deit-base on ImageNet-1k model will be downloaded when you first train you model, so the Internet should be connected.
 
 ## For evaluation:
 On CUB-200-2011 dataset:
 ```
-bash val_cub.sh {GPU_ID} ${NET} ${MODEL_PATH}
+bash val_cub.sh {GPU_ID} ${NET} ${NET_SCALE} ${SIZE} ${MODEL_PATH}
 ```
 On ImageNet1k dataset:
 ```
-bash val_ilsvrc.sh {GPU_ID} ${NET} ${MODEL_PATH}
+bash val_ilsvrc.sh {GPU_ID} ${NET} ${NET_SCALE} ${SIZE} ${MODEL_PATH}
 ```
 `GPU_ID` should be specified and multiple GPUs can be used for accelerating training and evaluation.
 
-`NET` shoule be chosen among `tiny`, `small` and `base`.
-
+`NET` shoule be chosen among `deit` and `conformer`.
+`NET_SCALE` shoule be chosen among `tiny`, `small` and `base`.
+`SIZE` shoule be chosen among `224` and `384`.
 `MODEL_PATH` is the path of pretrained model.
 
 # Visualization
