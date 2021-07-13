@@ -20,7 +20,9 @@ We provide pretrained TS-CAM models trained on CUB-200-2011 and ImageNet_ILSVRC2
 
 | Backbone | Loc.Acc@1 | Loc.Acc@5 | Loc.Gt-Known | Cls.Acc@1 | Cls.Acc@5 | Baidu Drive | Google Drive |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+|  Deit-T   |   64.5   |   80.9  |  86.4  |   72.9  |   91.9  |  [model](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)  | [model](https://drive.google.com/drive/folders/1vLJhWaRxCOTx_SyvrkP0XDXt9QNCXOdv?usp=sharing) |
 |  Deit-S   |   71.3   |   83.8  |  87.7  |   80.3  |   94.8  |  [model](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)  | [model](https://drive.google.com/drive/folders/1vLJhWaRxCOTx_SyvrkP0XDXt9QNCXOdv?usp=sharing) |
+|  Deit-B-384   |   75.8   |  84.1   |  86.6  |   86.8  |   96.7  |   [model](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)  | [model](https://drive.google.com/drive/folders/1vLJhWaRxCOTx_SyvrkP0XDXt9QNCXOdv?usp=sharing) |
 |  Conformer-S   |   77.2   |  90.9   |  94.1  |   81.0  |   95.8  |   [model](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)  | [model](https://drive.google.com/drive/folders/1vLJhWaRxCOTx_SyvrkP0XDXt9QNCXOdv?usp=sharing) |
 
 
@@ -28,7 +30,7 @@ We provide pretrained TS-CAM models trained on CUB-200-2011 and ImageNet_ILSVRC2
 
 | Backbone | Loc.Acc@1 | Loc.Acc@5 | Loc.Gt-Known | Cls.Acc@1 | Cls.Acc@5 | Baidu Drive | Google Drive |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-|  ILSVRC2012   |   53.4   |  64.3   |  67.6  |   74.3  |   92.1  |   [model](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)  | [model](https://drive.google.com/drive/folders/1vLJhWaRxCOTx_SyvrkP0XDXt9QNCXOdv?usp=sharing) |
+|  Deit-S   |   53.4   |  64.3   |  67.6  |   74.3  |   92.1  |   [model](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)  | [model](https://drive.google.com/drive/folders/1vLJhWaRxCOTx_SyvrkP0XDXt9QNCXOdv?usp=sharing) |
 
 Note: the Extrate Code for Baidu Drive is [gwg7](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)
 
