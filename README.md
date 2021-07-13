@@ -1,33 +1,42 @@
 # TS-CAM: Token Semantic Coupled Attention Map for Weakly SupervisedObject Localization
-This is the official implementaion of paper [TS-CAM: Token Semantic Coupled Attention Map for Weakly Supervised Object Localization](https://arxiv.org/abs/2103.14862)
+This is the official implementaion of paper [***TS-CAM: Token Semantic Coupled Attention Map for Weakly Supervised Object Localization***](https://arxiv.org/abs/2103.14862)
 
 This repository contains Pytorch training code, evaluation code, pretrained models and jupyter notebook for more visualization.
 
-If you use this code for a paper please cite:
+## Illustration
 
-```
-@article{Gao2021TSCAMTS,
-  title={TS-CAM: Token Semantic Coupled Attention Map for Weakly Supervised Object Localization},
-  author={Wei Gao and Fang Wan and Xingjia Pan and Zhiliang Peng and Qi Tian and Zhenjun Han and Bolei Zhou and Qixiang Ye},
-  journal={ArXiv},
-  year={2021},
-  volume={abs/2103.14862}
-}
-```
+Based on Deit, TS-CAM couples attention maps from visual image transformer with semantic-aware maps to obtain accurate localization maps (Token Semantic Coupled Attention Map, ts-cam).
+
+![ts-cam](./figures/ts-cam.png)
+
+# Updates
+- (06/07/2021) Higher performance is reported when using stonger visual transformer [Conformer](https://arxiv.org/abs/2105.03889).
 
 # Model Zoo
 
 We provide pretrained TS-CAM models trained on CUB-200-2011 and ImageNet_ILSVRC2012 datasets.
 
-| Dataset | Loc.Acc@1 | Loc.Acc@5 | Loc.Gt-Known | Cls.Acc@1 | Cls.Acc@5 | Baidu Drive | Google Drive |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-|  CUB-200-2011   |   71.3   |   83.8  |  87.7  |   80.3  |   94.8  |  [model](https://pan.baidu.com/s/1WdhcRh5pBFQD8DlbT_GoAQ)  | [model](https://drive.google.com/file/d/19l4uwsjE6uVah_0-a_VcRJlvnFb9NewH/view?usp=sharing) |
-|  ILSVRC2012   |   53.4   |  64.3   |  67.6  |   74.3  |   92.1  |   [model](https://pan.baidu.com/s/11-iPVVtKvKpcfuOD8VwOZw)  | [model](https://drive.google.com/file/d/1iNH-zI2i9mGipF0rGo1lsp13avdIjWuS/view?usp=sharing) |
+## CUB-200-2011 dataset
 
-Note: the Extrate Code for Baidu Drive is as follows:
-- CUB-200-2011: [36wz](https://pan.baidu.com/s/1WdhcRh5pBFQD8DlbT_GoAQ)
-- ILSVRC2012:   [sslq](https://pan.baidu.com/s/11-iPVVtKvKpcfuOD8VwOZw)
- 
+| Backbone | Loc.Acc@1 | Loc.Acc@5 | Loc.Gt-Known | Cls.Acc@1 | Cls.Acc@5 | Baidu Drive | Google Drive |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  Deit-T   |   64.5   |   80.9  |  86.4  |   72.9  |   91.9  |  [model](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)  | [model](https://drive.google.com/drive/folders/1vLJhWaRxCOTx_SyvrkP0XDXt9QNCXOdv?usp=sharing) |
+|  Deit-S   |   71.3   |   83.8  |  87.7  |   80.3  |   94.8  |  [model](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)  | [model](https://drive.google.com/drive/folders/1vLJhWaRxCOTx_SyvrkP0XDXt9QNCXOdv?usp=sharing) |
+|  Deit-B-384   |   75.8   |  84.1   |  86.6  |   86.8  |   96.7  |   [model](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)  | [model](https://drive.google.com/drive/folders/1vLJhWaRxCOTx_SyvrkP0XDXt9QNCXOdv?usp=sharing) |
+|  Conformer-S   |   77.2   |  90.9   |  94.1  |   81.0  |   95.8  |   [model](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)  | [model](https://drive.google.com/drive/folders/1vLJhWaRxCOTx_SyvrkP0XDXt9QNCXOdv?usp=sharing) |
+
+
+## ILSVRC2012 dataset
+
+| Backbone | Loc.Acc@1 | Loc.Acc@5 | Loc.Gt-Known | Cls.Acc@1 | Cls.Acc@5 | Baidu Drive | Google Drive |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  Deit-S   |   53.4   |  64.3   |  67.6  |   74.3  |   92.1  |   [model](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)  | [model](https://drive.google.com/drive/folders/1vLJhWaRxCOTx_SyvrkP0XDXt9QNCXOdv?usp=sharing) |
+
+Note: the Extrate Code for Baidu Drive is [gwg7](https://pan.baidu.com/s/1ui8dk-_U7wUw2JD0K9wOLw)
+
+- On CUB-200-2011 dataset, we train **TS-CAM** on one Titan RTX 2080Ti GPU, with batch-size 128 and learning rate 5e-5, respectively. 
+- On ILSVRC2012 dataset, we train **TS-CAM** on four Titan RTX 2080Ti GPUs, with batch-size 256 and learning rate 5e-4, respectively.
+
 # Usage
 
 First clone the repository locally:
@@ -141,6 +150,18 @@ TS-CAM/
 Please download pretrained TS-CAM model weights and try more visualzation results((Attention maps using our method and [Attention Rollout](https://arxiv.org/abs/2005.00928) method)).
 You can try other interseting images you like to show the localization map(ts-cams).
 
+## Visualize localization results
+We provide some visualization results as follows.
+
+![localization](./figures/localization_results.png)
+
+## Visualize attention maps
+
+We can also visualize attention maps from different transformer layers.
+
+![attention maps_cub](./figures/attention_many_layer_cub.png)
+![attention_map_ilsvrc](./figures/attention_many_layer_ilsvrc.png)
+
 # Contacts
 If you have any question about our work or this repository, please don't hesitate to contact us by emails.
 - [vasgaowei@gmail.com](vasgaowei@gmail.com)
@@ -149,3 +170,15 @@ If you have any question about our work or this repository, please don't hesitat
 
 You can also open an issue under this project.
 
+# Citation
+If you use this code for a paper please cite:
+
+```
+@article{Gao2021TSCAMTS,
+  title={TS-CAM: Token Semantic Coupled Attention Map for Weakly Supervised Object Localization},
+  author={Wei Gao and Fang Wan and Xingjia Pan and Zhiliang Peng and Qi Tian and Zhenjun Han and Bolei Zhou and Qixiang Ye},
+  journal={ArXiv},
+  year={2021},
+  volume={abs/2103.14862}
+}
+```
