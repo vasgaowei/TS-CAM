@@ -71,7 +71,7 @@ def main():
     writer = SummaryWriter(log_dir)
 
     train_loader, val_loader = creat_data_loader(cfg, os.path.join(cfg.BASIC.ROOT_DIR, cfg.DATA.DATADIR))
-    device, model, optimizer, cls_criterion = creat_model(cfg, args)
+    device, model, cls_criterion = creat_model(cfg, args)
 
     update_val_step = 0
     update_val_step, _, cls_top1, cls_top5, loc_top1, loc_top5, loc_gt_known, wrong_details = \
