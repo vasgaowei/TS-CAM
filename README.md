@@ -178,11 +178,12 @@ You can also open an issue under this project.
 If you use this code for a paper please cite:
 
 ```
-@article{Gao2021TSCAMTS,
-  title={TS-CAM: Token Semantic Coupled Attention Map for Weakly Supervised Object Localization},
-  author={Wei Gao and Fang Wan and Xingjia Pan and Zhiliang Peng and Qi Tian and Zhenjun Han and Bolei Zhou and Qixiang Ye},
-  journal={ArXiv},
-  year={2021},
-  volume={abs/2103.14862}
+@InProceedings{Gao_2021_ICCV,
+    author    = {Gao, Wei and Wan, Fang and Pan, Xingjia and Peng, Zhiliang and Tian, Qi and Han, Zhenjun and Zhou, Bolei and Ye, Qixiang},
+    title     = {TS-CAM: Token Semantic Coupled Attention Map for Weakly Supervised Object Localization},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {2886-2895}
 }
 ```
