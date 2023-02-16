@@ -1,4 +1,9 @@
 # TS-CAM: Token Semantic Coupled Attention Map for Weakly SupervisedObject Localization
+
+![Python 3.7](https://img.shields.io/badge/Python-3.7-green.svg?style=plastic)
+![PyTorch 1.6](https://img.shields.io/badge/PyTorch-1.6-EE4C2C.svg?style=plastic)
+![LICENSE](https://img.shields.io/github/license/yuantn/mi-aod.svg)](https://github.com/yuantn/mi-aod/blob/master/LICENSE)
+
 This is the official implementaion of paper [***TS-CAM: Token Semantic Coupled Attention Map for Weakly Supervised Object Localization***](https://arxiv.org/abs/2103.14862), which is accepted as ***ICCV 2021*** poster.
 
 This repository contains Pytorch training code, evaluation code, pretrained models and jupyter notebook for more visualization.
